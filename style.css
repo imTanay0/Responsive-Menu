@@ -5,7 +5,7 @@
 
 .sidebar {
   width: 180px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #111827;
   color: #9ca3af;
   display: flex;
@@ -71,8 +71,8 @@
 }
 
 .color-box {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   border: 1px solid rgb(186, 186, 186);
   border-radius: 5px;
   cursor: pointer;
@@ -92,7 +92,7 @@
   margin: 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 620px) {
   .sidebar {
     width: 50px;
   }
@@ -107,5 +107,54 @@
   }
   .color-box {
     margin: 5px 0;
+    width: 20px;
+    height: 20px;
   }
+}
+
+/* Night Mode */
+.sidebar.night {
+  background-color: #312e81;
+  color: #b4bbc7;
+}
+
+.sidebar-top.night,
+.sidebar-center.night,
+.sidebar-bottom.night {
+  border-bottom: 1px solid #949494;
+}
+
+.sidebar-bottom.night {
+  border: none;
+}
+
+.list-items.active.night, .list-items.night:hover {
+  background-color: #4338ca;
+  color: yellow;
+}
+
+/* Light Mode */
+.sidebar.light {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.sidebar-top.light,
+.sidebar-center.light,
+.sidebar-bottom.light {
+  width: 80%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #4b4b4b;
+}
+
+.sidebar-bottom.light {
+  border: none;
+}
+
+.list-items.active.light, .list-items.light:hover {
+  background-color: #d1d5db;
+  color: #111827;
 }
